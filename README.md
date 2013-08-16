@@ -1,2 +1,1 @@
-pantry_ad_domain_join_event_handler
-===================================
+<Insert spiel here about your daemon. This is a template>

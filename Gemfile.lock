@@ -1,0 +1,15 @@
+GIT
+  remote: git@github.com:QuickbridgeLtd/quartermaster.git
+  revision: 64884fe0a79dbdfc6e37bcd6fe77994c800245de
+  specs:
+    Quartermaster (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  Quartermaster!
