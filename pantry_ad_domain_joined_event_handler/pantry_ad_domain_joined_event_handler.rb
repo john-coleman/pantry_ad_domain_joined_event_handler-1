@@ -8,7 +8,8 @@ module Wonga
 
       def handle_message(message)
         @logger.info "Updating domain joined status for Request:#{message['pantry_request_id']}, Name:#{message['instance_name']}, InstanceID:#{message['instance_id']}"
-        @api_client.send_put_request("/api/ec2_instances/#{message["pantry_request_id"]}", { joined: true })
+        message[:joined] = true
+        @api_client.send_put_request("/api/ec2_instances/#{message["pantry_request_id"]}", message)
         @logger.info "Updating domain joined status for Request:#{message['pantry_request_id']} succeeded"
       end
     end
