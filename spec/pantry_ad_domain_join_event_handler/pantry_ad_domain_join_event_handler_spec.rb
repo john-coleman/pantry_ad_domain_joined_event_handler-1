@@ -9,7 +9,10 @@ describe Wonga::Daemon::PantryAdDomainJoinedEventHandler do
   it_behaves_like "handler"
 
   it "updates Pantry using PantryApiClient" do
-    expect(api_client).to receive(:send_put_request).with("/api/ec2_instances/42", { joined: true })
+    expect(api_client).to receive(:update_ec2_instance).with(
+      42,
+      { 'user_id' => 1, 'pantry_request_id' => 42, 'instance_id' => 24, :joined => true }
+    )
     subject.handle_message(message)
   end
 end
