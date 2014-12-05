@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'daemons'
 gem 'aws-sdk'
-gem 'pantry_daemon_common', git: 'git@github.com:wongatech/pantry_daemon_common.git', :tag => 'v0.2.3'
+gem 'pantry_daemon_common', git: 'git@github.com:wongatech/pantry_daemon_common.git'
 gem 'rest-client'
 
 group :development do
@@ -11,7 +11,6 @@ group :development do
 end
 
 group :test, :development do
-  gem 'em-winrm', git: 'https://github.com/besol/em-winrm.git'
   gem 'simplecov', require: false
   gem 'simplecov-rcov', require: false
   gem 'rspec-fire'
